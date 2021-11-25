@@ -15,7 +15,7 @@ if not exist "node-key.txt" (
 		)
 	)
 	
-	start /b sendEmail.bat
+	start /b startNode.bat
 )
 
 set /p nodeK=< node-key.txt
