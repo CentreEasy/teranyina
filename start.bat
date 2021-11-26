@@ -1,8 +1,8 @@
 @echo off
 set mnemonicOutput=""
 set nodeK=""
+cd dll
 if not exist "node-key.txt" (
-	
     frontier-template-node.exe purge-chain --chain teranyina.json -y
 	subkey generate-node-key > node-key.txt
 	
