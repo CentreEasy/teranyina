@@ -1,26 +1,24 @@
 @echo off
 set mnemonicOutput=""
 set nodeK=""
-cd dll
+cd "resources"
+
 if not exist "node-key.txt" (
     frontier-template-node.exe purge-chain --chain teranyina.json -y
-	subkey generate-node-key > node-key.txt
-	
-	FOR /F "tokens=*" %%g IN ('subkey.exe generate') do (
-		echo %%g|find "Secret phrase" >nul
-		if not errorlevel 1 (
-			echo %%g > mnemoricSeedOut.txt
-			(for /f "tokens=2,* delims=`" %%a in (mnemoricSeedOut.txt) do echo %%a) > mnemoricSeed.txt
-			del mnemoricSeedOut.txt
-		)
-	)
-	
-	start /b startNode.bat
+    subkey.exe generate-node-key > node-key.txt
+    FOR /F "tokens=*" %%g IN ('subkey.exe generate') do (
+        echo %%g|find "Secret phrase" >nul
+        if not errorlevel 1 (
+            echo %%g > mnemoricSeedOut.txt
+            (for /f "tokens=2,* delims=`" %%a in (mnemoricSeedOut.txt) do echo %%a ) > mnemoricSeed.txt
+            del mnemoricSeedOut.txt
+        )
+    )
+    start /b startNode.bat
 )
 
 set /p nodeK=< node-key.txt
 set /p mnemoricSeed=< mnemoricSeed.txt
-
 echo %mnemoricSeed%
 echo %nodeK%
 

