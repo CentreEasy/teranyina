@@ -1,13 +1,12 @@
 {
-  "name": "Staging Testnet",
-  "id": "staging_testnet",
+  "name": "Teranyina",
+  "id": "teranyina",
   "chainType": "Live",
   "bootNodes": [
-    "/ip4/34.79.72.201/tcp/30333/p2p/12D3KooWPrhQxRQ1QZjWKX6FiHTaY4Y3t9FjhoWGRKbfdK6ihi4Q",
-    "/ip4/34.140.84.1/tcp/30333/p2p/12D3KooWLRxUTkPQqR3GNMGMDS9TFXRBP5XhZzTVj5JveQufKMZk"
+    "/ip4/84.88.144.253/tcp/30333/p2p/12D3KooWL4orhdQao3iErVSGgruU9XkiwWKVZzjJutn1wKg44aAt"
   ],
   "telemetryEndpoints": null,
-  "protocolId": null,
+  "protocolId": "teranyina",
   "properties": null,
   "consensusEngine": null,
   "codeSubstitutes": {},
@@ -20,27 +19,27 @@
       "session": {
         "keys": [
           [
-            "5EnXt6ueGMp4MaZKk2GFFJpZdTCdmdSQsQK7Z4Y2fz5wYskj",
-            "5EnXt6ueGMp4MaZKk2GFFJpZdTCdmdSQsQK7Z4Y2fz5wYskj",
+            "5DRZaKoY8hufAGN2yj4nfbGeVA2k7UTXNN9LFkdPYifkstyx",
+            "5DRZaKoY8hufAGN2yj4nfbGeVA2k7UTXNN9LFkdPYifkstyx",
             {
-              "aura": "5EnXt6ueGMp4MaZKk2GFFJpZdTCdmdSQsQK7Z4Y2fz5wYskj",
-              "grandpa": "5CYDcFcLpwaDKhRM3eVojXuD2xYV93rkt9QStiw6hiQyT7r2"
+              "aura": "5DRZaKoY8hufAGN2yj4nfbGeVA2k7UTXNN9LFkdPYifkstyx",
+              "grandpa": "5CBfB2RYxS5P4XWuT4mHwhL9KUHda7YU868fnysnCZRvd4YW"
             }
           ],
           [
-            "5FC5q3tPiqH2XdDZUPZkiCBpJ4LpmjVYLpjUBMEpRt2zqnQW",
-            "5FC5q3tPiqH2XdDZUPZkiCBpJ4LpmjVYLpjUBMEpRt2zqnQW",
+            "5HU576QAo9urobUfF5n1vNQMYfV1rrcD9uytf3eVvQgJFtTf",
+            "5HU576QAo9urobUfF5n1vNQMYfV1rrcD9uytf3eVvQgJFtTf",
             {
-              "aura": "5FC5q3tPiqH2XdDZUPZkiCBpJ4LpmjVYLpjUBMEpRt2zqnQW",
-              "grandpa": "5HNyrA17CUCgMVxnhjj1aWaDA8w9y2X4SZ9USGPgPMYsP7hu"
+              "aura": "5HU576QAo9urobUfF5n1vNQMYfV1rrcD9uytf3eVvQgJFtTf",
+              "grandpa": "5DTSTvvCJ1pRPqvfuzXu1hLpM1qnLWLZmPf9XWPY7PYRvDxX"
             }
           ]
         ]
       },
       "validatorSet": {
         "validators": [
-          "5EnXt6ueGMp4MaZKk2GFFJpZdTCdmdSQsQK7Z4Y2fz5wYskj",
-          "5FC5q3tPiqH2XdDZUPZkiCBpJ4LpmjVYLpjUBMEpRt2zqnQW"
+          "5DRZaKoY8hufAGN2yj4nfbGeVA2k7UTXNN9LFkdPYifkstyx",
+          "5HU576QAo9urobUfF5n1vNQMYfV1rrcD9uytf3eVvQgJFtTf"
         ]
       },
       "aura": {
@@ -52,28 +51,22 @@
       "balances": {
         "balances": [
           [
-            "5EnXt6ueGMp4MaZKk2GFFJpZdTCdmdSQsQK7Z4Y2fz5wYskj",
+            "5DRZaKoY8hufAGN2yj4nfbGeVA2k7UTXNN9LFkdPYifkstyx",
             1152921504606846976
           ],
           [
-            "5EnHUZCRm2Zd7dQZpeLNdUVG4TFzja9pWvS4jaPJCRCVcsmw",
+            "5HU576QAo9urobUfF5n1vNQMYfV1rrcD9uytf3eVvQgJFtTf",
             1152921504606846976
           ]
         ]
       },
       "sudo": {
-        "key": "5EnXt6ueGMp4MaZKk2GFFJpZdTCdmdSQsQK7Z4Y2fz5wYskj"
+        "key": "5DRZaKoY8hufAGN2yj4nfbGeVA2k7UTXNN9LFkdPYifkstyx"
       },
       "ethereum": {},
       "evm": {
         "accounts": {
-          "0x6be02d1d3665660d22ff9624b7be0551ee1ac91b": {
-            "nonce": "0x0",
-            "balance": "0xffffffffffffffffffffffffffffffff",
-            "storage": {},
-            "code": []
-          },
-          "0xd43593c715fdd31c61141abd04a99fd6822c8558": {
+          "0xdfA4DbCda56fCD8FDEBbf0Ca395477a8bCDc8170": {
             "nonce": "0x0",
             "balance": "0xffffffffffffffffffffffffffffffff",
             "storage": {},
