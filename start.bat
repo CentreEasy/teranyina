@@ -22,8 +22,10 @@ set /p mnemoricSeed=< mnemoricSeed.txt
 echo %mnemoricSeed%
 echo %nodeK%
 
-frontier-template-node.exe purge-chain --chain teranyina.json -y
 frontier-template-node.exe key insert --chain teranyina.json --key-type aura --suri "%mnemoricSeed%"
 frontier-template-node.exe key insert --chain teranyina.json --key-type gran --scheme Ed25519 --suri "%mnemoricSeed%"
+
+rem hack encoding
+start /b EXIT 0
 
 frontier-template-node.exe --chain teranyina.json --validator --rpc-port 8334 --port 30333 --ws-port 9944 --node-key="%nodeK%" --rpc-methods=Unsafe --rpc-external --rpc-cors=all --ws-external --name teranyina
