@@ -28,4 +28,4 @@ frontier-template-node.exe key insert --chain teranyina.json --key-type gran --s
 rem hack encoding
 start /b EXIT 0
 
-frontier-template-node.exe --chain teranyina.json --validator --rpc-port 8334 --port 30333 --ws-port 9944 --node-key="%nodeK%" --rpc-methods=Unsafe --rpc-external --rpc-cors=all --ws-external --name teranyina
+frontier-template-node.exe --chain teranyina.json --validator --rpc-port 8334 --port 30333 --ws-port 9944 --node-key="%nodeK%" --rpc-methods=Unsafe --rpc-external --rpc-cors=all --ws-external --name teranyina --bootnodes /ip4/84.88.144.253/tcp/30333/p2p/12D3KooWL4orhdQao3iErVSGgruU9XkiwWKVZzjJutn1wKg44aAt
